@@ -18,10 +18,24 @@ class CalculationView {
     something() { 
         const p = document.createElement("div");
         p.innerText = "new";
+        p.setAttribute('name','duke');
         this.small.appendChild(p);
+    }
+
+    set name(name) { 
+        console.log(name);
+
+    }
+
+    get name() { 
+        return "hey joe";
     }
 
 }
 
 
 window.view = new CalculationView();
+
+window.view.name = "chief";
+
+console.log(window.view.name);
