@@ -2,11 +2,18 @@ class MiniCode extends HTMLElement {
 
     constructor() { 
         super();
-        
+        this.root = this.attachShadow({mode:'open'});
     }
 
     connectedCallback() { 
-        this.innerText = "hey joe " + this.getAttribute("power");
+        this.root.innerHTML = `
+        <style>
+            h1{
+                background: green;
+            }
+        </style>
+            <div>hello</div>
+            `
     }
     static get observedAttributes() {
         return ["power"];
@@ -18,7 +25,6 @@ class MiniCode extends HTMLElement {
 
     set power(pwr) { 
         this.setAttribute('power', pwr);
-        this.innerText = `super power: ${pwr}`;
     }
 
 }
