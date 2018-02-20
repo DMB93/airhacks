@@ -1,4 +1,6 @@
 import CalculationLoader from './CalculationLoader.js';
+import Timer from './Timer.js';
+
 
 class CalculationView { 
 
@@ -13,6 +15,11 @@ class CalculationView {
         this.loader = new CalculationLoader();
         this.loader.loadCalcs().then(calcs => console.log(calcs));
         blogger('hopefully logs');
+        this.name = "bmw";
+        console.log(this.name);
+        this.timer = new Timer();
+        this.timer.timeout = 500;
+
     }
 
     something() { 
@@ -20,6 +27,7 @@ class CalculationView {
         p.innerText = "new";
         p.setAttribute('name','duke');
         this.small.appendChild(p);
+
     }
 
     set name(name) { 
