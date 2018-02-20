@@ -6,8 +6,8 @@ export default class Alert {
         this.ws.onmessage = e => this.onMessage(e);
     }
 
-    onMessage(event) { 
-        console.log(event);
+    onMessage({ data }) { 
+        console.log(data);
     }
     send(msg) { 
         this.ws.send(msg);
