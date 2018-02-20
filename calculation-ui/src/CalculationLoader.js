@@ -4,4 +4,6 @@ export default class CalculationLoader {
         return fetch('http://localhost:8080/calculation/resources/calculations').
             then(response => response.json());
     }
+
+    
 }

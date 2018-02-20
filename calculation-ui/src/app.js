@@ -1,6 +1,6 @@
 import CalculationLoader from './CalculationLoader.js';
 import Timer from './Timer.js';
-
+import Alert from './Alert.js';
 
 class CalculationView { 
 
@@ -19,7 +19,7 @@ class CalculationView {
         console.log(this.name);
         this.timer = new Timer();
         this.timer.timeout = 500;
-
+        this.alert = new Alert();
     }
 
     something() { 
