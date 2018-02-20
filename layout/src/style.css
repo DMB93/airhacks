@@ -1,25 +1,30 @@
 body{
-    height: 100%;
+    height: 100vh;
     width: 100%;
-}
-div{
     display:grid;
-    grid-template-rows: 1fr 2fr 1fr;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 0.5em;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "header nav"
+    "main nav"
+    "footer footer"
 }
 
 
 header{
+    grid-area: header;
     background: lightblue;
 }
 main{
+    grid-area: main;
     background: lightcoral;
 }
 nav{
+    grid-area: nav;
     background: lightsalmon;
 }
 
 footer{
+    grid-area: footer;
     background:lightskyblue;
 }
