@@ -16,6 +16,11 @@ class MiniCode extends HTMLElement {
         console.log(name,oldValue,newValue);
     }
 
+    set power(pwr) { 
+        this.setAttribute('power', pwr);
+        this.innerText = `super power: ${pwr}`;
+    }
+
 }
 
 customElements.define('mini-code',MiniCode);
