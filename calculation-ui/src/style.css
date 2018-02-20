@@ -2,3 +2,7 @@
         background: green;
         margin: 1em;
     }
+
+    input:valid{
+        background: green;
+    }
