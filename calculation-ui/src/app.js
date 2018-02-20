@@ -12,6 +12,7 @@ class CalculationView {
 
         this.loader = new CalculationLoader();
         this.loader.loadCalcs().then(calcs => console.log(calcs));
+        blogger('hopefully logs');
     }
 
     something() { 
