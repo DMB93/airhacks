@@ -1,3 +1,5 @@
+import CalculationLoader from './CalculationLoader.js';
+
 class CalculationView { 
 
     constructor() { 
@@ -7,6 +9,9 @@ class CalculationView {
         this.button.onclick = () => this.something();
         console.dir(this.inputText);
         this.inputText.onchange = e => this.small.innerText = e.target.value;
+
+        this.loader = new CalculationLoader();
+        this.loader.loadCalcs().then(calcs => console.log(calcs));
     }
 
     something() { 
