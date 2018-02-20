@@ -1,8 +1,25 @@
-* {
-  --bmw-silver: yellow; 
-  --bmw-default-size: 2em; 
+body{
+    height: 100%;
+    width: 100%;
 }
-h2{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: var(--bmw-silver,red);
+div{
+    display:grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 0.5em;
+}
+
+
+header{
+    background: lightblue;
+}
+main{
+    background: lightcoral;
+}
+nav{
+    background: lightsalmon;
+}
+
+footer{
+    background:lightskyblue;
 }
