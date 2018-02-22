@@ -1,4 +1,6 @@
+import CalculationOutput from './CalculationOutput.js';
 import CalculationInput from './CalculationInput.js';
+
 class TopFrame extends HTMLElement { 
 
     constructor() { 
@@ -7,7 +9,16 @@ class TopFrame extends HTMLElement {
     }
 
     connectedCallback() { 
+        this.calcInput = new CalculationInput();
+        this.calcOutput = new CalculationOutput();
+        this.root.appendChild(this.calcOutput);
+        this.root.appendChild(this.calcInput);
+        this.calcInput.addEventListener(CalculationInput.EVENT_NAME, e => this.onCalculationPerformed(e));
 
+    }
+
+    onCalculationPerformed({detail}) { 
+        this.calcOutput.result = detail.calculation;
     }
 
 }

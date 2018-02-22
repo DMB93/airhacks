@@ -4,6 +4,7 @@ export default class CalculationInput extends HTMLElement {
         super();
         this.root = this.attachShadow({ mode: 'open' });
         this.calculate = this.calculate.bind(this);
+        CalculationInput.EVENT_NAME = 'result';
     }
 
     connectedCallback() { 
@@ -24,7 +25,7 @@ export default class CalculationInput extends HTMLElement {
         console.log(a, b);
         const c = Number.parseInt(a) * Number.parseInt(b);
         
-        const event = new CustomEvent('result', {
+        const event = new CustomEvent(CalculationInput.EVENT_NAME, {
             detail: {
                 calculation: c
             }
