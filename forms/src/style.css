@@ -1,0 +1,23 @@
+section{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+}
+form{
+    min-width: 60%;
+    display:flex;
+    flex-direction: column;
+}
+
+label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+input:invalid{
+     border: red dashed 1px;
+}
+
+input[type="text"]:valid{
+    border: lightgreen solid 1px;
+}
