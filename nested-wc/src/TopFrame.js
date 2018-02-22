@@ -10,15 +10,16 @@ class TopFrame extends HTMLElement {
 
     connectedCallback() { 
         this.calcInput = new CalculationInput();
-        this.calcOutput = new CalculationOutput();
-        this.root.appendChild(this.calcOutput);
+        this.outputs = this.querySelectorAll('calc-output');
+        this.outputs.
+            forEach(o => this.root.appendChild(o));
         this.root.appendChild(this.calcInput);
         document.body.addEventListener(CalculationInput.EVENT_NAME, e => this.onCalculationPerformed(e));
 
     }
 
-    onCalculationPerformed({detail}) { 
-        this.calcOutput.result = detail.calculation;
+    onCalculationPerformed({ detail }) { 
+        this.outputs.forEach(o => o.result = detail.calculation);
     }
 
 }
