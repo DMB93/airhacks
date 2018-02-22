@@ -19,8 +19,17 @@ export default class CalculationInput extends HTMLElement {
     }
 
     calculate() { 
-        console.log('hugo');
-        console.log(this.a.value,this.b.value);
+        const a = this.a.value;
+        const b = this.b.value;
+        console.log(a, b);
+        const c = Number.parseInt(a) * Number.parseInt(b);
+        
+        const event = new CustomEvent('result', {
+            detail: {
+                calculation: c
+            }
+        });
+        this.dispatchEvent(event);
     }
 
     template() { 
