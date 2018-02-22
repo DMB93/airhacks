@@ -18,6 +18,11 @@ class ActiveVehicle extends HTMLElement {
         if (!ActiveVehicle.template) {
             ActiveVehicle.template = document.createElement('template');
             ActiveVehicle.template.innerHTML = `
+        <style>
+        output{
+            background: var(--vehicleback,green);
+        }
+        </style>    
         <section>
         <output>
           hey duke
