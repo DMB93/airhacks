@@ -15,9 +15,9 @@ class ActiveVehicle extends HTMLElement {
     }
 
     hugo() { 
-        if (!this.template) {
-            this.template = document.createElement('template');
-            this.template.innerHTML = `
+        if (!ActiveVehicle.template) {
+            ActiveVehicle.template = document.createElement('template');
+            ActiveVehicle.template.innerHTML = `
         <section>
         <output>
           hey duke
@@ -25,7 +25,7 @@ class ActiveVehicle extends HTMLElement {
         </section>        
         `;
         }    
-        return this.template.content.cloneNode(true);
+        return ActiveVehicle.template.content.cloneNode(true);
     }
 }
 
