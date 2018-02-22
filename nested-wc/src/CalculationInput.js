@@ -30,7 +30,7 @@ export default class CalculationInput extends HTMLElement {
                 calculation: c
             }
         });
-        this.dispatchEvent(event);
+        document.body.dispatchEvent(event);
     }
 
     template() { 

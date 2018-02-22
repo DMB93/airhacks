@@ -9,6 +9,7 @@ export default class CalculationOutput extends HTMLElement {
     connectedCallback() { 
         this.root.innerHTML = this.template();
         this.output = this.root.querySelector("output");
+        document.body.addEventListener('result', e => this.result = e.detail.calculation);
     }
 
     set result(result) { 

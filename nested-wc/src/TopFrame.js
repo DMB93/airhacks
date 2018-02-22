@@ -13,7 +13,7 @@ class TopFrame extends HTMLElement {
         this.calcOutput = new CalculationOutput();
         this.root.appendChild(this.calcOutput);
         this.root.appendChild(this.calcInput);
-        this.calcInput.addEventListener(CalculationInput.EVENT_NAME, e => this.onCalculationPerformed(e));
+        document.body.addEventListener(CalculationInput.EVENT_NAME, e => this.onCalculationPerformed(e));
 
     }
 
